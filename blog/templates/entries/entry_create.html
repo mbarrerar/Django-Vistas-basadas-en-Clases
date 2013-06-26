@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Create Entry</title>
+</head>
+<body>
+	<form action="{% url 'entries_list' %}" method="GET">
+		<input type="text" name="q">
+		<button type="submit">Search</button>
+	</form>
+	<form action="" method="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value="Create" />
+	</form>
+</body>
+</html>

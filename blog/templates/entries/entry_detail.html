@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Detalle de entrada</title>
+</head>
+<body>
+
+	{% if messages %}
+		{% for message in messages %}
+		<li>
+			{{message}}
+		</li>
+		{% endfor %}
+	{% endif %}
+
+	<ul>
+		<li>{{object.title}}</li>
+		<li>{{object.content}}</li>
+		<li>{{object.slug}}</li>
+		<li>{{object.created_date}}</li>
+		<li>{{object.updated_date}}</li>
+	</ul>
+</body>
+</html>

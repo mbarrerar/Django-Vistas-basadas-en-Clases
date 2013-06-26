@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Lista de las entradas</title>
+</head>
+<body>
+	<form action="{% url 'entries_list' %}" method="GET">
+		<input type="text" name="q">
+		<button type="submit">Search</button>
+	</form>
+	<ul>
+	{% for entry in object_list %}
+		<li>{{entry.title}}</li>
+		<li>{{entry.content}}</li>
+		<li>{{entry.slug}}</li>
+		<li>{{entry.created_date}}</li>
+		<li>{{entry.updated_date}}</li>
+	{% empty %}
+		<li>No se encontraron entradas.</li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

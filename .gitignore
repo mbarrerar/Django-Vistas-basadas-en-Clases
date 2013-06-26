@@ -1,0 +1,2 @@
+#No debemos subir los pyc que se generan automaticamente
+*.pyc
